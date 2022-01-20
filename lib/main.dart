@@ -21,20 +21,20 @@ class MainApp extends StatelessWidget {
         backgroundColor: Colors.grey[700],
       ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(30.0, 40.00, 30.0, 0.0),
+        padding: const EdgeInsets.fromLTRB(30.0, 40.00, 30.0, 0.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Center(
+            const Center(
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/images/profile.jpg'),
                 radius: 70.0,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
-            Center(
+            const Center(
               child: Text(
                 '"Hello World...!!!"',
                 style: TextStyle(
@@ -43,17 +43,17 @@ class MainApp extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
-            Text(
+            const Text(
               "Name",
               style: TextStyle(color: Colors.white, letterSpacing: 3.0),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
-            Text(
+            const Text(
               "Aldy Sufriyanto",
               style: TextStyle(
                 color: Colors.amber,
@@ -62,15 +62,15 @@ class MainApp extends StatelessWidget {
                 fontSize: 20.0,
               ),
             ),
-            SizedBox(height: 15.0),
-            Text(
+            const SizedBox(height: 15.0),
+            const Text(
               "Date of Birth",
               style: TextStyle(color: Colors.white, letterSpacing: 3.0),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10.0,
             ),
-            Text(
+            const Text(
               "14-09-1999",
               style: TextStyle(
                   color: Colors.amber,
@@ -78,9 +78,9 @@ class MainApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   fontSize: 20.0),
             ),
-            SizedBox(height: 15.0),
+            const SizedBox(height: 15.0),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.phone,
                   color: Colors.white,
@@ -92,11 +92,11 @@ class MainApp extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 15.0,
             ),
             Row(
-              children: [
+              children: const [
                 Icon(
                   Icons.email,
                   color: Colors.white,
