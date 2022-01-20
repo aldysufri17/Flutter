@@ -7,8 +7,15 @@ void main() {
   ));
 }
 
-class MainApp extends StatelessWidget {
+class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
+
+  @override
+  State<MainApp> createState() => _MainAppState();
+}
+
+class _MainAppState extends State<MainApp> {
+  int myage = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +25,15 @@ class MainApp extends StatelessWidget {
         title: const Text("ID CARD"),
         centerTitle: true,
         elevation: 0.0,
+        backgroundColor: Colors.grey[700],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            myage++;
+          });
+        },
+        child: const Icon(Icons.add),
         backgroundColor: Colors.grey[700],
       ),
       body: Padding(
@@ -79,22 +95,22 @@ class MainApp extends StatelessWidget {
                   fontSize: 20.0),
             ),
             const SizedBox(height: 15.0),
-            Row(
-              children: const [
-                Icon(
-                  Icons.phone,
-                  color: Colors.white,
-                ),
-                SizedBox(width: 10.0),
-                Text(
-                  "089616328907",
-                  style: TextStyle(color: Colors.white, fontSize: 18.0),
-                )
-              ],
+            const Text(
+              "Age",
+              style: TextStyle(color: Colors.white, letterSpacing: 3.0),
             ),
             const SizedBox(
-              height: 15.0,
+              height: 10.0,
             ),
+            Text(
+              '$myage',
+              style: const TextStyle(
+                  color: Colors.amber,
+                  letterSpacing: 3.0,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 20.0),
+            ),
+            const SizedBox(height: 15.0),
             Row(
               children: const [
                 Icon(
